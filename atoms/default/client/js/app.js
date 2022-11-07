@@ -327,7 +327,7 @@ const Main = () => {
 
                         <div>
                             <LoopingBgVid image="001.jpg" content={content.img1} />
-                            <LoopingBgVid image="002.jpg" content={content.img2} />
+                            <LoopingBgVid image="002.jpg" content={content.img2} attribution={content.img2Attrib} />
 
                         </div>
 
@@ -346,7 +346,7 @@ const Main = () => {
                         </section>
                         <div>
                             <LoopingBgVid image="003.jpg" content={content.img3} />
-                            <LoopingBgVid image="004.jpg" content={content.img4} />
+                            <LoopingBgVid image="004.jpg" content={content.img4} attribution={content.img4Attrib}  />
 
                         </div>
                         <section className={`container`} >
@@ -358,7 +358,7 @@ const Main = () => {
                         </section>                        
                         <div>
                             <LoopingBgVid image="005.jpg" content={content.img5} />
-                            <LoopingBgVid image="006.jpg" content={content.img6} />
+                            <LoopingBgVid image="006.jpg" content={content.img6} attribution={content.img6Attrib}  />
                         </div>
                         <section className={`container`} >
                             <div>
