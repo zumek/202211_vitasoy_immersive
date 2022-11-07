@@ -357,12 +357,12 @@ section {
   }
   position: relative;
   overflow: hidden;
-  &.container {
-    &>div {
-      flex-basis: 50%;
-      // width: 50%;
-    }
-  }
+  // &.container {
+  //   &>div {
+  //     flex-basis: 50%;
+  //     // width: 50%;
+  //   }
+  // }
   .content {
     padding: 1rem;
     // padding-bottom: 10rem;
