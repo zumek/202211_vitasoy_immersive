@@ -83,20 +83,24 @@ const Footer = ({content, related, shareUrl}) => {
 
     return (
         <section className="footer dark-text">
-            <div className="content">
-                <div className="cta-wrap">
-                    <div className="cta" {...setHtml(content.cta)} />
-                    <div className="disc" {...setHtml(content.disc)}></div>
 
-                </div>
-                <div className="break"><span /><span /><span /><span /></div>
+            <div>
+                <div className="content">
+                    <div className="cta-wrap">
+                        <div className="cta" {...setHtml(content.cta)} />
+                        <div className="disc" {...setHtml(content.disc)}></div>
+                    </div>
                 
-                
-                <div className="share">
-                    <SocialBar title={content.shareTitle} url={shareUrl} />
                 </div>
-                <div className="related">
-                    <RelatedContent cards={related} />
+                    <div className="break"><span /><span /><span /><span /></div>
+                
+                <div className="content">
+                    <div className="share">
+                        <SocialBar title={content.shareTitle} url={shareUrl} />
+                    </div>
+                    <div className="related">
+                        <RelatedContent cards={related} />
+                    </div>
                 </div>
             </div>
         </section>
@@ -333,7 +337,10 @@ const Main = () => {
 
                                 <div className="content">
                                     <div {...setHtml(content.block2)} />
-                                    <img src={`${assetsPath}/person.png`} className="mw-100" alt="" />
+                                    <div className="text-center mar-2">
+                                        <img src={`${assetsPath}/person.png`} className="mw-100" alt="" />
+
+                                    </div>
                                 </div>
                             </div>    
                         </section>
