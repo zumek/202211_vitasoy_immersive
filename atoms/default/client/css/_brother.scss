@@ -905,3 +905,35 @@ section.footer {
     object-fit: cover;
   }
 }
+
+.scroller {
+  position: relative;
+  
+  .panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    .content {
+      max-width: 30rem;
+      background-color: rgba(0, 0, 0, .75);
+      padding: 2rem;
+    }
+    p, a {
+      font-size: 1.25rem;
+      color: white;
+
+    }
+
+    a {
+      text-decoration: underline;
+    }
+  }  
+  &.active {
+  }
+}

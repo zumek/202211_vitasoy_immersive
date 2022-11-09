@@ -163,13 +163,7 @@ const LoopingBgVid = ({src, image, content, attribution}) => {
                 <Fragment>
 
                 <div className="image" style={{backgroundImage: `url(<%= path %>/${image})`}} >
-                    {content && 
-                    <div className="panel">
-                        <div className="content">
-                            <div className="body" {...setHtml(content)}></div>
-                        </div>
-                    </div>
-                    }
+                   
                 </div>
                 
                 { attribution && 
@@ -283,6 +277,33 @@ const VideoPlayer = () => {
 
 }
 
+const Scroller = ({content, children}) => {
+    const ref = useRef();
+    useEffect(()=>{
+
+        ScrollTrigger.create({
+            trigger: ref.current,
+            start: 'top top',
+            end: 'bottom top',
+            toggleClass: 'active',
+            pin: true,
+        });
+
+        setTimeout(()=>ScrollTrigger.refresh(), 1000)
+    },[]);
+
+    return (
+        <div className="scroller">
+            {children}
+            <div className="panel" ref={ref}>
+                        <div className="content">
+                            <div className="body" {...setHtml(content)}></div>
+                        </div>
+                    </div>
+        </div>
+    )
+}
+
 const Main = () => {
     const loaded = useSelector(s=>s.dataLoaded);
     
@@ -325,11 +346,11 @@ const Main = () => {
 
 
 
-                        <div>
-                            <LoopingBgVid image="001.jpg" content={content.img1} />
-                            <LoopingBgVid image="002.jpg" content={content.img2} attribution={content.img2Attrib} />
+                        <Scroller content={content.img1} >
+                            <LoopingBgVid image="001.jpg" />
+                            <LoopingBgVid image="002.jpg" attribution={content.img2Attrib} />
 
-                        </div>
+                        </Scroller>
 
                         <section className={`container`} >
 
@@ -344,11 +365,11 @@ const Main = () => {
                                 </div>
                             </div>    
                         </section>
-                        <div>
-                            <LoopingBgVid image="003.jpg" content={content.img3} />
-                            <LoopingBgVid image="004.jpg" content={content.img4} attribution={content.img4Attrib}  />
+                        <Scroller content={content.img3} >
+                            <LoopingBgVid image="003.jpg"  />
+                            <LoopingBgVid image="004.jpg"  attribution={content.img4Attrib}  />
 
-                        </div>
+                        </Scroller>
                         <section className={`container`} >
                             <div className="wrap">
                                 <div className="content">
@@ -356,10 +377,10 @@ const Main = () => {
                                 </div>
                             </div>    
                         </section>                        
-                        <div>
-                            <LoopingBgVid image="005.jpg" content={content.img5} />
-                            <LoopingBgVid image="006.jpg" content={content.img6} attribution={content.img6Attrib}  />
-                        </div>
+                        <Scroller content={content.img5} >
+                            <LoopingBgVid image="005.jpg"  />
+                            <LoopingBgVid image="006.jpg"  attribution={content.img6Attrib}  />
+                        </Scroller>
                         <section className={`container`} >
                             <div>
 
