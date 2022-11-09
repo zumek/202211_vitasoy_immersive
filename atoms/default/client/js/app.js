@@ -62,7 +62,7 @@ const Header = () => {
                 <div className="bg"
                     style={`background-image: linear-gradient(360deg, rgba(0,0,0,0.7) 10%, transparent 40%);`}>
                     
-                    <LoopingBgVid src="video/vitasoy.mp4" />
+                    <video src={`${assetsPath}/video/vitasoy.mp4`} muted autoPlay loop playsInline/>
                     
 
                         <div className="w-90p m-auto">
