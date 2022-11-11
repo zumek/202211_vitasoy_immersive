@@ -75,6 +75,9 @@ const Header = () => {
 
                 </div>
             </div>
+            <div className="attrib">
+                <div {...setHtml(content.videoAttrib)}></div>
+            </div>
         </header>        
     )
 }

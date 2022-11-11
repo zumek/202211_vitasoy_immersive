@@ -335,6 +335,44 @@ header {
     }
     text-align: right;
   }
+
+  .attrib {
+    // text-align: center;
+    font-style: italic;
+    max-width: 42rem;
+    margin: 1rem auto;
+    padding: 0 2rem;
+    position: relative;
+
+
+
+    margin-left: 0.6rem;
+    @include mq(tablet) {
+      margin-left: auto;
+    }
+
+    @include mq(desktop) {
+      max-width: 62rem;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 6px;
+      top: -10px;
+      width: 0;
+      height: 0;
+      margin: 14px auto;
+      border-left:
+        10px solid transparent;
+      border-right:
+        10px solid transparent;
+      border-bottom:
+        14px solid #B4AEA8;
+    }
+    
+  }
 }
 .vis {
   text-align: center;

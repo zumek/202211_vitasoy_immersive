@@ -31,5 +31,10 @@
     @import 'videojs';
     @import "common";
     @import "brother";
-    @import "audioPlayer";    
+    @import "audioPlayer";   
+    
+    p {
+      margin-block-start: 1rem;
+      margin-block-end: 1rem;
+    }
 }  
